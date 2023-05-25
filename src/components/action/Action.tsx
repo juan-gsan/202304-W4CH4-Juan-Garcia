@@ -8,10 +8,10 @@ export function Action() {
 
   return (
     <>
-      <a href="#" className="call" onClick={handleCall}>
+      <a href="#" className="call active" onClick={handleCall}>
         Call
       </a>
-      <a href="#" className="hang active" onClick={handleHang}>
+      <a href="#" className="hang" onClick={handleHang}>
         Hang
       </a>
     </>

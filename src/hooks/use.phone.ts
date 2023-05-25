@@ -3,24 +3,34 @@ import { useState } from "react";
 export function usePhone() {
   const [isCalling, setIsCalling] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [isActive, setIsActive] = useState(false);
 
-  const handleCall = () => {
+  function handleChange() {
+    if (isCalling === true) {
+      return "message";
+    }
+    return "off";
+  }
+
+  function handleCall() {
     setIsCalling(true);
     handleChange();
-  };
+  }
 
-  const handleChange = () => {
-    if (isCalling !== true) {
-      return "off";
-    }
-    return "message";
-  };
-
-  const handleHang = () => {
+  function handleHang() {
     setIsCalling(true);
     setPhoneNumber("");
     handleChange();
-  };
+  }
+
+  function handleClick() {
+    setPhoneNumber(phoneNumber);
+    handleAddNumber();
+  }
+
+  function handleAddNumber() {
+    [...phoneNumber, item.key];
+  }
 
   return {
     isCalling,
@@ -28,5 +38,7 @@ export function usePhone() {
     handleCall,
     handleHang,
     handleChange,
+    handleClick,
+    handleAddNumber,
   };
 }
