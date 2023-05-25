@@ -15,11 +15,23 @@ Aquí tienes la maquetación HTML/CSS de una aplicación, tendrás que programar
 
 Separa todo en los siguientes componentes:
 
-- Info -> Contenedor general -
-- Display ->
+- Info
+- Display
 - Actions
   - Action
 - Keyboard
   - Key
 
-Entrega también un listado de responsabilidades.
+## Listado de responsabilidades.
+
+- Info -> Recibe estado llamada de context - Devuelve render estado llamada
+
+- Display -> Recibe numero de context - Devuelve render número
+
+- Actions (botones llamar y colgar)
+
+  - Action -> Recibe handlers de context - Devuelve un cambio de estado
+
+- Keyboard (teclas números)
+
+  - Key -> Recibe un evento click - Devuelve un cambio en display
